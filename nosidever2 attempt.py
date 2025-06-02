@@ -803,11 +803,6 @@ def try_combine(item1, item2):
     else:
         print("Those items can't be combined.")
     
-#------Calling the inventory in game-------
-examineChoice= input("> ")
-if examineChoice=="inventory":
-    handle_inventory()
-
 #------Map management-----------------
 map={
     "OUTSIDE":{
@@ -907,12 +902,12 @@ def remFromMap(location_name):
 
 gameOver= False
 while not gameOver:
-    print("Testing, please use inventory fuctions to combine james and the snorkel")
+    print("Testing, game not yet complete")
     examineChoice= input("> ").lower().strip()
     
+    #------Calling the inventory in game-------
     if examineChoice=="inventory":
         handle_inventory()
+    #------Calling the map in game-------------
     if examineChoice== "map":
         handle_map()
-    
-
